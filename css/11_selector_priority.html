@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector Proiority</title>
+    <meta name="description" content="Selector Priority">
+    <style>
+        /* 
+           all(*)> element(tag) > class, pseudo > id > inline-style > important(절대 우선)
+        */
+        * {background-color: silver;}
+        h1 { background-color: aquamarine;}
+        div { background-color: tomato;}
+        p {background-color: yellow;}
+        #p1 {
+            color: red;
+        }
+        .p2 {
+            color: green !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Selector Priority</h1>
+    <div>
+        <p id="p1" class="p2" style="color: blue;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quisquam natus modi possimus ullam necessitatibus, eaque autem fugiat repudiandae. Asperiores voluptates aliquam delectus unde repudiandae, placeat accusantium veniam qui voluptas.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quisquam natus modi possimus ullam necessitatibus, eaque autem fugiat repudiandae. Asperiores voluptates aliquam delectus unde repudiandae, placeat accusantium veniam qui voluptas.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quisquam natus modi possimus ullam necessitatibus, eaque autem fugiat repudiandae. Asperiores voluptates aliquam delectus unde repudiandae, placeat accusantium veniam qui voluptas.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descendent Selector</title>
+    <meta name="description" content="Descendent Selector">
+    <style>
+        /* 
+            descendent selector : 조상[space]자손
+            child selector : 부모 > 자식
+            인접한 sibilings selector : 기준 + 형제
+            모든 sibilings selector : 기준 ~ 형제
+         */
+        h1 {
+            color: blue;
+            background-color: aquamarine;
+        }
+
+        body li ul {
+            background-color: yellow;
+        }
+        #main-menu a {
+            color: red;
+        }
+        #sub-menu a {
+            color: green;
+        }
+        #sub-menu li > a {
+            text-decoration: none;
+        }
+        li#main-menu + li {
+            background-color: tomato;
+        }
+        li#main-menu + li > a {
+            color:  yellow;
+            text-decoration: none;
+        }
+        h2 + p {
+            background-color: silver;
+        }
+        h2 ~ p {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Descendent selector</h1>
+    <nav>
+        <ul >
+            <li id="main-menu">
+                <a href="#">menu1</a>
+                <ul id="sub-menu">
+                    <li><a href="#">sub-menu1</a></li>
+                    <li><a href="#">sub-menu2</a></li>
+                </ul>
+            </li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+        </ul>
+    </nav>
+    <h2>sibilings Selector</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum accusantium voluptates repudiandae iusto praesentium aut doloribus eos pariatur deleniti tempora reprehenderit illum, sint dicta dolorum ratione corrupti voluptatum fugit ipsam?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum accusantium voluptates repudiandae iusto praesentium aut doloribus eos pariatur deleniti tempora reprehenderit illum, sint dicta dolorum ratione corrupti voluptatum fugit ipsam?</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum accusantium voluptates repudiandae iusto praesentium aut doloribus eos pariatur deleniti tempora reprehenderit illum, sint dicta dolorum ratione corrupti voluptatum fugit ipsam?</p>
+</body>
+</html>
