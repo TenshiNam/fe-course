@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Layout</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+        <style>
+            * { font-family: "Nanum Gothic", sans-serif;}
+            /* 기본 초기화 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Arial', sans-serif; background-color: #f6f5ef; }
+ul { list-style: none; }
+a { text-decoration: none; color: #333; font-size: 13px; }
+
+/* 헤더 전체 컨테이너 */
+.header {
+  width: 100%;
+  background-color: #f6f5ef;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10px 0;
+}
+
+.header-container {
+  max-width: 1100px; /* 중앙 정렬 폭 */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+/* 로고 스타일 */
+.logo img {
+  width: 75px;
+  height: 75px;
+}
+/* 오른쪽 메뉴 묶음 */
+.nav-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+/* 상단 유틸리티 메뉴 */
+.top-nav ul {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.top-nav a {
+  color: #555;
+  font-size: 12px;
+}
+/* 하단 메인 메뉴 */
+.main-nav ul {
+  display: flex;
+  gap: 30px;
+}
+.main-nav a {
+  font-weight: bold;
+  font-size: 13px;
+  color: #333;
+}
+.main-nav a:hover {
+  text-decoration: underline;
+  color: #006241; /* 스타벅스 그린 */
+}
+/* 돋보기 아이콘 박스 예시 */
+.search-icon {
+  border: 1px solid #ccc;
+  padding: 2px 8px;
+  border-radius: 5px;
+  background: white;
+  cursor: pointer;
+}
+
+        </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.starbucks.co.kr/common/img/common/logo.png" alt="Starbucks Logo">
+        </div>
+
+        <div class="nav-wrapper">
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="#">Sign In </a></li>
+                    <li><a href="#">My Starbucks</a></li>
+                    <li><a href="#">Customer Service & Ideas</a></li>
+                    <li><a href="#">Find a Store</a></li>
+                    <li class="search-icon"><i class="fas fa-search"></i></li>
+                </ul>
+            </nav>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#">COFFEE</a></li>
+                    <li><a href="#">MENU</a></li>
+                    <li><a href="#">STORE</a></li>
+                    <li><a href="#">ESG</a></li>
+                    <li><a href="#">STARBUCKS REWARDS</a></li>
+                    <li><a href="#">CORPORATE SALES</a></li>
+                    <li><a href="#">WHAT'S NEW</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+</body>
+</html>

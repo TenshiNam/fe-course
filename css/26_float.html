@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Style</title>
+    <style>
+        .box-group {
+            /* float: left; */
+        }
+        .box-group div {
+            width: 100px;  height: 100px;
+            /* display: inline-block; */
+        }
+        .d1 { 
+            background-color: aquamarine;
+            float: left;
+        }
+        .d2 { 
+            background-color: #f9ff7f;
+            float: left;
+        }
+        .d3 { 
+            background-color: #ff7fdd;
+            float: left;
+        }
+        .box-group p {
+            clear: left;
+        }
+        .img-group {
+            width: 500px;
+            height: 300px;
+            border: 1px solid #ccc;
+        }
+        .img-group img {
+            width: 100px;
+            height: 100px;
+            float: right;
+            padding: 20px;
+        }
+        p.no-float { clear: both; /* float 속성을 삭제 */}
+    </style>
+</head>
+<body>
+    <h1>Float Style : block-level의 엘리먼트를 한줄로 정렬하여 배치</h1>
+    <div class="box-group">
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Dolorem qui nam dicta pariatur quia est voluptatibus sequi minima 
+            cum neque sunt repudiandae consequuntur numquam obcaecati quod, 
+            fugiat quasi aut ipsam.</p>
+    </div>
+    <div class="img-group">
+        <img src="../images/img01_seo.png" alt="나무이미지">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Doloribus ea ipsam corrupti aperiam reiciendis molestiae, 
+            ratione minus beatae explicabo voluptatum aliquam ducimus, 
+            veritatis vero? Odit quis dicta magnam harum voluptatem!</p>
+        <p class="no-float">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore aliquid porro sit delectus tempora praesentium earum sunt, similique ab expedita quis consectetur autem molestias provident. Molestiae quisquam natus est consequatur?</p>
+    </div>
+</body>
+</html>
