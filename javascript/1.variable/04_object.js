@@ -44,7 +44,7 @@ console.log(fruitList[0]);
 console.log(fruitList[2]);
 console.log(fruitList[4]);
 console.log(fruitList[fruitList.length-1]);
-console.log(fruitList.length);
+console.log(fruitList.length);  
 
 
 //객체타입을 요소로 하는 배열 생성
