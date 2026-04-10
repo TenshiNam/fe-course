@@ -1,0 +1,21 @@
+.menu_list {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    padding: 0;
+    margin: 20px 0;
+}
+.menu1 {
+    border: 1px solid gray;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: antiquewhite;
+    color: #000;
+}
+.menu2 {
+    border: 1px solid gray;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: tomato;
+    color: #fff;
+}
