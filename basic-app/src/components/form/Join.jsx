@@ -39,7 +39,7 @@ console.log(form);
             alert("패스워드를 입력해주세요");
             pwdRef.current.focus();
         } else {
-            console.log('서버 전송 -->> ');
+            console.log('서버 전송 -->> ', form);
         }
     }
 
