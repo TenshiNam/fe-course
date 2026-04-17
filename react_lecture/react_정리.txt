@@ -244,9 +244,6 @@
         )
       }
 
-
-
-
 9. 상태 관리(State) - useState   
   (1) 컴포넌트가 관리하는 동적값이 변경되면, 리액트 컴포넌트가 자동으로 리렌더링함 
   (2) useState 사용법
@@ -258,14 +255,59 @@
         Array :: const [array, setArray] = useState([]);
         Object :: const [obj, setObj] = useState({});
 
-
 10. Ref - useRef
   (1) Ref란?
-    - 실제 DOM 요소를 직접 창조하여 관리하는 기능을 가짐 (= Reference)
+     - 실제 DOM 요소를 직접 참조하여 관리하는 기능을 가짐 (= Reference)  
   (2) useRef 사용법
     import { useRef } from 'react';
     const nameRef = useRef(null);
     const handleOnChange = () => {}
-    <input type= "text" name='name' ref={nameRef} onChange={handleOnChange}/>
+    <input type="text" name="name" ref={nameRef} onChange={handleOnChange}/>
   (3) DOM 입력폼 값 가져오기 : nameRef.current.value
-  (3) DOM 입력폼 포커스 정의 : nameRef.current.focus()  
+      DOM 입력폼 포커스 정의 : nameRef.current.focus()
+
+11. 리액트 라이프 사이클 & 리액트 개발자 도구(react developer tools)
+   (1) 라이프 사이클 3단계
+      - Mount(마운트) : 처음 생성
+      - Update(업데이트) : 변화, 업데이트
+      - UnMount(언마운트) : 종료, 제거
+   (2) Mount(마운트)
+      - 컴포넌트가 처음으로 렌더링되는 시점
+      - 예) API 호출, 초기 데이터 렌더링 등
+   (3) Update(업데이트)
+      - 컴포넌트가 리렌더링 되는 시점
+      - 예) State 변경, props 변경, 부모 컴포넌트 변경 등
+   (4) UnMount(제거)
+      - 컴포넌트가 화면에서 사라질 때
+      - 예) 이벤트 종료, 타이머 제거, 메모리 정리 등
+
+   (5) useEffect로 라이프 사이클 제어(✨)
+      import { useEffect } from 'react';
+      
+      export default fuction [컴포넌트명]() {
+        useEffect(() => {
+          //1. 마운트 or 업데이트 시 출력
+          console.log("Mount or Update!!");
+
+          //2. 언마운트
+          return () => {
+            console.log("UnMount!!");
+          }
+        } , [depencies, ...] );
+
+        return(
+          <></>
+        )
+      }
+
+12. SPA- Single Page Application
+  (1) 개념 : 한 개의 HTML 페이지에서 모든 화면의 전환이 이루어짐
+             페이지 이동 시 새로고침 현상이 발생하지 않음
+  (2) MPA(Multi Page Application)  
+      - 메뉴별 독립적인 페이지를 생성하여 화면의 전환이 이루어짐  
+      - 페이지 이동 시 새로고침 현상이 발생함
+  (3) 라우팅(Routing)  
+      - 메뉴로 구성된 컴포넌트 페이지로 이동하는 방식
+      - react-router-dom 패키지 : Link, NavLink 컴포넌트 포함..              
+
+
